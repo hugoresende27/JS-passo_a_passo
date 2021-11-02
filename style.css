@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&display=swap');
+
+:root       /*ATRIBUIR CORES A VAR, PARA USAR var(--line-border-fill*/
+{
+    --line-border-fill:#3498db;
+    --line-border-empty:#e0e0e0;
+    -corteste:#0f0f45;
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+/*alinhar conteudos ao centro*/
+body
+{
+    background-color: #f6f7fb;
+    font-family: 'Lato','Verdana',sans-serif;
+    display: flex;          /*coloca tudo em linha*/
+   /* flex-direction: column; /*coloca tudo em coluna*/
+    align-items: center;    /*alinha horizontalmente*/
+    justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.conteudo
+{
+    text-align: center;
+}
+.progresso-conteudo
+{
+    display: flex;  /*coloca as divs em linha*/
+    justify-content: space-between; /* espaço entre as divs*/
+    position: relative;     /*posição PAI*/
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+
+}
+.progresso-conteudo::before
+{
+    content: '';/*<-para usar before e after*/
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform:  translateY(-50%);
+    height: 4px;
+    width: 100%; /*100%*/
+    z-index: -1;
+}
+
+.progresso 
+{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform:  translateY(-50%);
+    height: 4px;
+    width: 0%; /*100%*/
+    z-index: -1;
+    transition: .4s ease;
+}
+
+.circulo
+{
+    background-color: white;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    /*PARA CENTRAR OS NUMEROS DENTRO DOS CIRCULOS*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*---------------*/
+    border: 3px solid var(--line-border-empty);
+    transition: .4s ease;
+}
+
+.circulo.ativo
+{
+    border-color: var(--line-border-fill);
+}
+
+.btn
+{
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.btn:active
+{
+    transform: scale(0.98);     /*efeito para aumentar o tamanho quando activo*/
+}
+
+.btn:focus
+{
+    outline: 0;
+}
+
+.btn:disabled
+{
+    background-color: var(--line-border-empty);
+}
+
+
+@media(max-width: 480px)        /*para ecras mais pequenos*/
+{
+    .conteudo
+    {
+        width: 100vw;
+    }
+    .painel:nth-of-type(4), /*conforme o tamanha do ecra, vai mostrar 3 ou 5 miniaturas da imagem, RESPONSIVO*/
+    .painel:nth-of-type(5)  /*media query*/
+    {
+        display: none;
+    }
+    footer 
+    {
+        display: none;
+    };
+}
+
+
+/*estilos do footer */
+
+footer{
+    font-size: 8pt;
+    color: chartreuse;
+    
+    text-align: center;
+    border-top: 1px dashed;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    bottom: 0;
+    
+    
+}
+
+footer a{
+   color: #edf5e1;  /*cor dos links a preto*/
+   text-decoration: none;     /*retira o sublinhado dos links*/
+  
+}
+
+footer a:hover{
+    color: red;
+}
+
+

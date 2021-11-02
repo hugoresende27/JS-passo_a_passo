@@ -42,5 +42,22 @@ function update()
             circulo.classList.remove('ativo');
         }
     })
+   const ativos = document.querySelectorAll('.ativo');
+   console.log(  (  (ativos.length-1) / (cir.length-1) ) * 100 + '%');
+   progresso.style.width = ((ativos.length-1) / (cir.length-1) ) * 100 + '%';
+
+   if (ativo === 1)
+   {
+       antes.disabled = true;
+   }
+   else if (ativo === cir.length)
+   {
+       depois.disabled =true;
+   }
+   else
+   {
+       antes.disabled = false;
+       depois.disabled = false;
+   }
 };
 

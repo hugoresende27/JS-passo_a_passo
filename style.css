@@ -14,7 +14,7 @@
 /*alinhar conteudos ao centro*/
 body
 {
-    background-color: #f6f7fb;
+    background-color: #55565a;
     font-family: 'Lato','Verdana',sans-serif;
     display: flex;          /*coloca tudo em linha*/
    /* flex-direction: column; /*coloca tudo em coluna*/
@@ -84,6 +84,7 @@ body
 .circulo.ativo
 {
     border-color: var(--line-border-fill);
+    background-color: rgb(38, 7, 87);
 }
 
 .btn
@@ -144,6 +145,7 @@ footer{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     position: absolute;
     bottom: 0;
+    margin-bottom: 20px;
     
     
 }

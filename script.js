@@ -61,3 +61,14 @@ function update()
    }
 };
 
+/////////////////////////////////PROCURAR ///////////////////////////
+const search = document.querySelector('.procurar');
+const btn = document.querySelector('.btnProc');
+const input = document.querySelector('.input');
+
+btn.addEventListener('click', () =>
+{
+    search.classList.toggle('ativo')    // toogle para adicionar ou remover classes
+    input.focus()
+})
+

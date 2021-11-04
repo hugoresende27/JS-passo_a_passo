@@ -14,10 +14,10 @@
 /*alinhar conteudos ao centro*/
 body
 {
-    background-color: #55565a;
+    background-image: linear-gradient(90deg, #7d5fff, #7158e2);
     font-family: 'Lato','Verdana',sans-serif;
     display: flex;          /*coloca tudo em linha*/
-   /* flex-direction: column; /*coloca tudo em coluna*/
+   /*flex-direction: column; /*coloca tudo em coluna*/
     align-items: center;    /*alinha horizontalmente*/
     justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
     height: 100vh;
@@ -114,6 +114,55 @@ body
 {
     background-color: var(--line-border-empty);
 }
+/*CSS DO PROCURAR*/
+.procurar
+{
+    position: relative;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.procurar .input
+{
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+.btnProc
+{
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top:0;
+    /*right: 70px;*/
+    left: 145px;
+    height: 50px;
+    width: 50px;
+    transition: transform .3s ease;
+}
+
+.btnProc:focus, .input:focus 
+{
+    outline: none;
+}
+.procurar.ativo .input 
+{
+    width: 200px;
+}
+
+.procurar.ativo .btnProc 
+{
+    transform: translateX(115px);
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
 
 
 @media(max-width: 480px)        /*para ecras mais pequenos*/
@@ -137,15 +186,16 @@ body
 /*estilos do footer */
 
 footer{
+    
     font-size: 8pt;
     color: chartreuse;
     
     text-align: center;
     border-top: 1px dashed;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
+    
+   
+    margin: 20px;
     
     
 }
